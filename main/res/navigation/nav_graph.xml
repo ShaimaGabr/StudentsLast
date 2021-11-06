@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.onlinestudent.home.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_scan"
+            app:destination="@id/scan" />
+        <action
+            android:id="@+id/action_home2_to_wepsite"
+            app:destination="@id/wepsite" />
+        <action
+            android:id="@+id/action_home2_to_profilecourse"
+            app:destination="@id/profilecourse" />
+        <action
+            android:id="@+id/action_home2_to_profildiploma"
+            app:destination="@id/profildiploma" />
+        <action
+            android:id="@+id/action_home2_to_notification"
+            app:destination="@id/notification" />
+        <action
+            android:id="@+id/action_home2_to_facebook"
+            app:destination="@id/facebook"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/home2"/>
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/scan"
+        android:name="com.example.onlinestudent.scanegeneral.scan"
+        android:label="fragment_scan"
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_scan_to_recorddatabase"
+            app:destination="@id/recorddatabase" />
+    </fragment>
+    <fragment
+        android:id="@+id/facebook"
+        android:name="com.example.onlinestudent.home.facebook"
+        android:label="fragment_facebook"
+        tools:layout="@layout/fragment_facebook" />
+    <fragment
+        android:id="@+id/wepsite"
+        android:name="com.example.onlinestudent.home.wepsite"
+        android:label="fragment_wepsite"
+        tools:layout="@layout/fragment_wepsite" />
+    <fragment
+        android:id="@+id/profilecourse"
+        android:name="com.example.onlinestudent.profilegeneral.course.profilecourse"
+        android:label="fragment_profilecourse"
+        tools:layout="@layout/fragment_profilecourse" >
+        <action
+            android:id="@+id/action_profilecourse_to_contentcourse"
+            app:destination="@id/contentcourse" />
+    </fragment>
+    <fragment
+        android:id="@+id/profildiploma"
+        android:name="com.example.onlinestudent.profilegeneral.profildiploma"
+        android:label="fragment_profildiploma"
+        tools:layout="@layout/fragment_profildiploma" >
+        <action
+            android:id="@+id/action_profildiploma_to_attendcourse2"
+            app:destination="@id/attendcourse" />
+    </fragment>
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.example.onlinestudent.notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/contentcourse"
+        android:name="com.example.onlinestudent.profilegeneral.course.Contentcourse"
+        android:label="fragment_contentcourse"
+        tools:layout="@layout/fragment_contentcourse" >
+        <action
+            android:id="@+id/action_contentcourse_to_profilecourse"
+            app:destination="@id/profilecourse" />
+    </fragment>
+    <fragment
+        android:id="@+id/recorddatabase"
+        android:name="com.example.onlinestudent.scanegeneral.Recorddatabase"
+        android:label="fragment_recorddatabase"
+        tools:layout="@layout/fragment_recorddatabase" >
+        <action
+            android:id="@+id/action_recorddatabase_to_scan"
+            app:destination="@id/scan" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendcourse"
+        android:name="com.example.onlinestudent.profilegeneral.attendcourse"
+        android:label="fragment_attendcourse"
+        tools:layout="@layout/fragment_attendcourse" >
+        <action
+            android:id="@+id/action_attendcourse_to_profildiploma2"
+            app:destination="@id/profildiploma" />
+    </fragment>
+</navigation>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.onlinestudent.scanegeneral.ScanViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        tools:context=".scanegeneral.scan">
+
+        <TextView
+            android:id="@+id/goin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOIN"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fancySwitch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toEndOf="@+id/fancySwitch"
+            app:layout_constraintTop_toTopOf="@+id/fancySwitch" />
+
+        <TextView
+            android:id="@+id/goout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GoOut"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fancySwitch"
+            app:layout_constraintEnd_toStartOf="@+id/fancySwitch"
+            app:layout_constraintHorizontal_bias="0.83"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fancySwitch" />
+
+        <it.ngallazzi.fancyswitch.FancySwitch
+            android:id="@+id/fancySwitch"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:actionOffDrawable="@drawable/ic_out"
+            app:actionOnDrawable="@drawable/ic_in"
+            app:baseColor="#20074C"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:orientation="LANDSCAPE" />
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:autoFocusButtonColor="#A581E6"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonColor="#A581E6"
+            app:flashButtonVisible="true"
+            app:frameColor="#A581E6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fancySwitch"
+            app:maskColor="#fff" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tv_textview"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:text="@{viewModel.scan}"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintVertical_bias="0.066" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
